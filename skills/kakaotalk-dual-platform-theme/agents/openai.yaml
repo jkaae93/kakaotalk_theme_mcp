@@ -1,0 +1,4 @@
+interface:
+  display_name: "KakaoTalk Dual Platform Theme"
+  short_description: "Create matching iOS and Android themes"
+  default_prompt: "Use $kakaotalk-dual-platform-theme to generate coordinated KakaoTalk themes for both iOS and Android."

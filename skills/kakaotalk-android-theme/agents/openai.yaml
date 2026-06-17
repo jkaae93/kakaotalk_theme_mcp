@@ -1,0 +1,4 @@
+interface:
+  display_name: "KakaoTalk Android Theme"
+  short_description: "Build Android KakaoTalk theme APKs"
+  default_prompt: "Use $kakaotalk-android-theme to create or modify a KakaoTalk Android theme from a sample project."

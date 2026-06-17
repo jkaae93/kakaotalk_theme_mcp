@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "kakaotalk-theme-local": {
+      "command": "python3",
+      "args": [
+        "/Users/kaae/dev/projects/카톡 테마 메이커/mcp/kakaotalk_theme_mcp.py"
+      ],
+      "env": {
+        "KAKAOTALK_THEME_ALLOWED_ROOTS": "/Users/kaae/dev/projects/카톡 테마 메이커:/private/tmp"
+      }
+    }
+  }
+}
