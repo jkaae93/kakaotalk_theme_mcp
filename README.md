@@ -173,6 +173,80 @@ Passcode images:
 | Passcode bullet 3 checked | `theme_passcode_03_checked_image.png` |
 | Passcode bullet 4 checked | `theme_passcode_04_checked_image.png` |
 
+### Where These Assets Appear
+
+#### iOS
+
+| Filename | Used where | Notes |
+| --- | --- | --- |
+| `commonIcoTheme.png` | KakaoTalk theme list/settings | 테마 선택 목록에 보이는 대표 아이콘 |
+| `maintabIcoFriends.png` | Main bottom tab bar | Friends tab normal state |
+| `maintabIcoFriendsSelected.png` | Main bottom tab bar | Friends tab selected state |
+| `maintabIcoChats.png` | Main bottom tab bar | Chats tab normal state |
+| `maintabIcoChatsSelected.png` | Main bottom tab bar | Chats tab selected state |
+| `maintabIcoNow.png` | Main bottom tab bar | Now/Open Chats tab normal state |
+| `maintabIcoNowSelected.png` | Main bottom tab bar | Now/Open Chats tab selected state |
+| `maintabIcoShopping.png` | Main bottom tab bar | Shopping tab normal state |
+| `maintabIcoShoppingSelected.png` | Main bottom tab bar | Shopping tab selected state |
+| `maintabIcoMore.png` | Main bottom tab bar | More tab normal state |
+| `maintabIcoMoreSelected.png` | Main bottom tab bar | More tab selected state |
+| `maintabIcoPiccoma.png` | Main bottom tab bar | Piccoma tab normal state, region-dependent |
+| `maintabIcoPiccomaSelected.png` | Main bottom tab bar | Piccoma tab selected state, region-dependent |
+| `maintabIcoCall.png` | Main bottom tab bar | Call tab normal state |
+| `maintabIcoCallSelected.png` | Main bottom tab bar | Call tab selected state |
+| `findBtnAddFriend.png` | Friends/profile related UI | Add friend button image |
+| `mainBgImage.png` | Friends/Chats/More main screens | Main background image, optional if color-only |
+| `chatroomBgImage.png` | Chat room | Chat background image |
+| `profileImg01.png` | Default profile/avatar | Default profile image |
+| `chatroomBubbleSend01.png` | Chat room sent messages | First sent bubble image |
+| `chatroomBubbleSend02.png` | Chat room sent messages | Grouped sent bubble image |
+| `chatroomBubbleReceive01.png` | Chat room received messages | First received bubble image |
+| `chatroomBubbleReceive02.png` | Chat room received messages | Grouped received bubble image |
+| `passcodeBgImage.png` | Passcode screen | Passcode background |
+| `passcodeKeypadPressed.png` | Passcode screen | Pressed keypad state |
+| `passcodeBullet01.png` through `passcodeBullet04.png` | Passcode screen | Empty/normal passcode bullets |
+| `passcodeBulletSelected01.png` through `passcodeBulletSelected04.png` | Passcode screen | Filled/selected passcode bullets |
+| `maintabBgImage.png` | Main bottom tab bar | Optional tab bar background image |
+
+#### Android
+
+| Filename | Used where | Notes |
+| --- | --- | --- |
+| `ic_launcher.png` | Android launcher and app install UI | Main app icon |
+| `ic_launcher_round.png` | Android launcher on devices using round icons | Round app icon |
+| `ic_launcher_foreground.png` | Android adaptive launcher icon | Foreground layer |
+| `ic_launcher_background.png` | Android adaptive launcher icon | Background layer |
+| `ic_launcher-web.png` | High-res app icon contexts | Web/store-style preview asset in sample |
+| `theme_maintab_ico_friends_image.png` | Main bottom tab bar | Friends tab normal state |
+| `theme_maintab_ico_friends_focused_image.png` | Main bottom tab bar | Friends tab selected state |
+| `theme_maintab_ico_chats_image.png` | Main bottom tab bar | Chats tab normal state |
+| `theme_maintab_ico_chats_focused_image.png` | Main bottom tab bar | Chats tab selected state |
+| `theme_maintab_ico_now_image.png` | Main bottom tab bar | Now tab normal state |
+| `theme_maintab_ico_now_focused_image.png` | Main bottom tab bar | Now tab selected state |
+| `theme_maintab_ico_shopping_image.png` | Main bottom tab bar | Shopping tab normal state |
+| `theme_maintab_ico_shopping_focused_image.png` | Main bottom tab bar | Shopping tab selected state |
+| `theme_maintab_ico_more_image.png` | Main bottom tab bar | More tab normal state |
+| `theme_maintab_ico_more_focused_image.png` | Main bottom tab bar | More tab selected state |
+| `theme_maintab_ico_piccoma_image.png` | Main bottom tab bar | Piccoma tab normal state, region-dependent |
+| `theme_maintab_ico_piccoma_focused_image.png` | Main bottom tab bar | Piccoma tab selected state, region-dependent |
+| `theme_maintab_ico_call_image.png` | Main bottom tab bar | Call tab normal state |
+| `theme_maintab_ico_call_focused_image.png` | Main bottom tab bar | Call tab selected state |
+| `theme_background_image.png` | Main screens | Main background image, optional if color-only |
+| `theme_chatroom_background_image.png` | Chat room | Chat background image |
+| `theme_splash_image.png` | Theme app splash screen | May only apply below Android OS 12 |
+| `theme_maintab_cell_image.9.png` | Main bottom tab bar | Stretchable tab bar background |
+| `theme_find_add_friend_button_image.png` | Friends/profile related UI | Add friend button normal state |
+| `theme_find_add_friend_button_pressed_image.png` | Friends/profile related UI | Add friend button pressed state |
+| `theme_profile_01_image.png` through `theme_profile_03_image.png` | Default profile/avatar | Default profile image variants |
+| `theme_profile_01_image_full.png` through `theme_profile_03_image_full.png` | Profile detail view | Full-size default profile variants |
+| `theme_chatroom_bubble_me_01_image.9.png` | Chat room sent messages | First sent bubble 9-patch |
+| `theme_chatroom_bubble_me_02_image.9.png` | Chat room sent messages | Grouped sent bubble 9-patch |
+| `theme_chatroom_bubble_you_01_image.9.png` | Chat room received messages | First received bubble 9-patch |
+| `theme_chatroom_bubble_you_02_image.9.png` | Chat room received messages | Grouped received bubble 9-patch |
+| `theme_passcode_background_image.png` | Passcode screen | Passcode background |
+| `theme_passcode_01_image.png` through `theme_passcode_04_image.png` | Passcode screen | Empty/normal passcode bullets |
+| `theme_passcode_01_checked_image.png` through `theme_passcode_04_checked_image.png` | Passcode screen | Filled/checked passcode bullets |
+
 ## Register In Codex
 
 Codex에서 사용하려면 `~/.codex/config.toml`에 아래 블록을 추가합니다.
