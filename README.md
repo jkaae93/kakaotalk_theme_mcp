@@ -49,6 +49,130 @@ Python 문법 검사는 아래처럼 실행할 수 있습니다.
 PYTHONPYCACHEPREFIX=/tmp/kakaotalk_theme_pycache python3 -m py_compile mcp/kakaotalk_theme_mcp.py
 ```
 
+## Icons And Images To Prepare
+
+테마를 만들기 전에 아래 아이콘과 이미지를 먼저 준비하면 작업이 훨씬 빨라집니다. 실제 파일명은 사용하는 KakaoTalk sample theme의 파일명을 최우선으로 맞추고, MCP의 `list_required_assets` tool로도 같은 목록을 확인할 수 있습니다.
+
+### iOS Assets
+
+iOS는 CSS에서 `name.png`로 참조하더라도 실제 파일은 보통 `Images/name@2x.png`, `Images/name@3x.png` 쌍으로 준비합니다.
+
+Required icons:
+
+| Purpose | Base filename |
+| --- | --- |
+| Theme list icon | `commonIcoTheme.png` |
+| Friends tab | `maintabIcoFriends.png` |
+| Friends tab selected | `maintabIcoFriendsSelected.png` |
+| Chats tab | `maintabIcoChats.png` |
+| Chats tab selected | `maintabIcoChatsSelected.png` |
+| Now/Open Chats tab | `maintabIcoNow.png` |
+| Now/Open Chats tab selected | `maintabIcoNowSelected.png` |
+| Shopping tab | `maintabIcoShopping.png` |
+| Shopping tab selected | `maintabIcoShoppingSelected.png` |
+| More tab | `maintabIcoMore.png` |
+| More tab selected | `maintabIcoMoreSelected.png` |
+| Piccoma tab | `maintabIcoPiccoma.png` |
+| Piccoma tab selected | `maintabIcoPiccomaSelected.png` |
+| Call tab | `maintabIcoCall.png` |
+| Call tab selected | `maintabIcoCallSelected.png` |
+| Add friend button | `findBtnAddFriend.png` |
+
+Required or commonly replaced images:
+
+| Purpose | Base filename |
+| --- | --- |
+| Main background | `mainBgImage.png` |
+| Chat background | `chatroomBgImage.png` |
+| Default profile | `profileImg01.png` |
+| Sent bubble first | `chatroomBubbleSend01.png` |
+| Sent bubble grouped | `chatroomBubbleSend02.png` |
+| Received bubble first | `chatroomBubbleReceive01.png` |
+| Received bubble grouped | `chatroomBubbleReceive02.png` |
+| Passcode background | `passcodeBgImage.png` |
+| Passcode keypad pressed | `passcodeKeypadPressed.png` |
+
+Optional iOS images:
+
+- `profileImg02.png`
+- `profileImg03.png`
+- `passcodeBullet01.png` through `passcodeBullet04.png`
+- `passcodeBulletSelected01.png` through `passcodeBulletSelected04.png`
+- `maintabBgImage.png`
+
+### Android Assets
+
+Android는 같은 base filename을 sample project의 density/resource qualifier 폴더에 맞춰 유지합니다. 9-patch 파일은 `.9.png` 확장자를 그대로 유지해야 합니다.
+
+App icons:
+
+| Purpose | Filename pattern |
+| --- | --- |
+| Launcher icon | `src/main/res/mipmap-*/ic_launcher.png` |
+| Round launcher icon | `src/main/res/mipmap-*/ic_launcher_round.png` |
+| Launcher foreground | `src/main/res/mipmap-*/ic_launcher_foreground.png` |
+| Launcher background | `src/main/res/mipmap-*/ic_launcher_background.png` |
+| Web/high-res icon | `src/main/ic_launcher-web.png` |
+
+Main tab icons:
+
+| Purpose | Filename |
+| --- | --- |
+| Friends tab | `theme_maintab_ico_friends_image.png` |
+| Friends tab selected | `theme_maintab_ico_friends_focused_image.png` |
+| Chats tab | `theme_maintab_ico_chats_image.png` |
+| Chats tab selected | `theme_maintab_ico_chats_focused_image.png` |
+| Now tab | `theme_maintab_ico_now_image.png` |
+| Now tab selected | `theme_maintab_ico_now_focused_image.png` |
+| Shopping tab | `theme_maintab_ico_shopping_image.png` |
+| Shopping tab selected | `theme_maintab_ico_shopping_focused_image.png` |
+| More tab | `theme_maintab_ico_more_image.png` |
+| More tab selected | `theme_maintab_ico_more_focused_image.png` |
+| Piccoma tab | `theme_maintab_ico_piccoma_image.png` |
+| Piccoma tab selected | `theme_maintab_ico_piccoma_focused_image.png` |
+| Call tab | `theme_maintab_ico_call_image.png` |
+| Call tab selected | `theme_maintab_ico_call_focused_image.png` |
+
+Common images:
+
+| Purpose | Filename |
+| --- | --- |
+| Main background | `theme_background_image.png` |
+| Chat background | `theme_chatroom_background_image.png` |
+| Splash image | `theme_splash_image.png` |
+| Main tab background | `theme_maintab_cell_image.9.png` |
+| Add friend button | `theme_find_add_friend_button_image.png` |
+| Add friend button pressed | `theme_find_add_friend_button_pressed_image.png` |
+| Default profile 1 | `theme_profile_01_image.png` |
+| Default profile 2 | `theme_profile_02_image.png` |
+| Default profile 3 | `theme_profile_03_image.png` |
+| Full profile 1 | `theme_profile_01_image_full.png` |
+| Full profile 2 | `theme_profile_02_image_full.png` |
+| Full profile 3 | `theme_profile_03_image_full.png` |
+
+Chat bubble images:
+
+| Purpose | Filename |
+| --- | --- |
+| Sent bubble first | `theme_chatroom_bubble_me_01_image.9.png` |
+| Sent bubble grouped | `theme_chatroom_bubble_me_02_image.9.png` |
+| Received bubble first | `theme_chatroom_bubble_you_01_image.9.png` |
+| Received bubble grouped | `theme_chatroom_bubble_you_02_image.9.png` |
+
+Passcode images:
+
+| Purpose | Filename |
+| --- | --- |
+| Passcode background | `theme_passcode_background_image.png` |
+| Passcode bullet 1 | `theme_passcode_01_image.png` |
+| Passcode bullet 2 | `theme_passcode_02_image.png` |
+| Passcode bullet 3 | `theme_passcode_03_image.png` |
+| Passcode bullet 4 | `theme_passcode_04_image.png` |
+| Passcode bullet 1 checked | `theme_passcode_01_checked_image.png` |
+| Passcode bullet 2 checked | `theme_passcode_02_checked_image.png` |
+| Passcode bullet 3 checked | `theme_passcode_03_checked_image.png` |
+| Passcode bullet 4 checked | `theme_passcode_04_checked_image.png` |
+
 ## Register In Codex
 
 Codex에서 사용하려면 `~/.codex/config.toml`에 아래 블록을 추가합니다.
