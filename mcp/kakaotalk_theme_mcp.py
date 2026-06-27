@@ -28,6 +28,26 @@ def default_allowed_roots():
 ALLOWED_ROOTS = default_allowed_roots()
 
 RESOURCE_FILES = {
+    "kakaotalk://repo/llms": {
+        "name": "llms.txt",
+        "description": "AI-oriented overview for LLMs and generative answer engines.",
+        "path": PROJECT_ROOT / "llms.txt",
+    },
+    "kakaotalk://repo/illustrators": {
+        "name": "Illustrator onboarding guide",
+        "description": "Guide for illustrators and character artists creating KakaoTalk themes.",
+        "path": PROJECT_ROOT / "docs" / "for-illustrators.md",
+    },
+    "kakaotalk://repo/faq": {
+        "name": "FAQ",
+        "description": "Answer-engine-friendly Q&A for KakaoTalk theme creators.",
+        "path": PROJECT_ROOT / "docs" / "faq.md",
+    },
+    "kakaotalk://repo/discoverability": {
+        "name": "SEO/GEO/AEO notes",
+        "description": "Discoverability targets and metadata for search and AI answer engines.",
+        "path": PROJECT_ROOT / "docs" / "discoverability.md",
+    },
     "kakaotalk://design/ios": {
         "name": "iOS design.md",
         "description": "KakaoTalk iOS theme generation guidelines.",

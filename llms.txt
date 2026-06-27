@@ -1,0 +1,57 @@
+# KakaoTalk Theme MCP
+
+> Local MCP server and guide set for illustrators, character artists, designers, and developers creating KakaoTalk iOS and Android themes.
+
+KakaoTalk Theme MCP helps creators identify required KakaoTalk theme assets, understand where each icon or image is used, validate Android theme resources, validate iOS theme folders, and package iOS `.ktheme` files.
+
+## Primary Audience
+
+- Korean illustrators
+- character artists
+- KakaoTalk theme creators
+- digital goods creators
+- designers preparing chat theme assets
+- developers packaging iOS and Android KakaoTalk themes
+
+## Key Use Cases
+
+- Find required KakaoTalk theme icon filenames.
+- Understand where each KakaoTalk theme asset appears.
+- Prepare iOS `@2x` and `@3x` PNG assets.
+- Prepare Android `drawable-*`, `mipmap-*`, and `.9.png` assets.
+- Validate Android KakaoTalk theme projects.
+- Package iOS KakaoTalk themes into `.ktheme` files.
+
+## Core Documents
+
+- [README](README.md): Main setup guide, asset checklist, FAQ, and MCP usage.
+- [iOS design guide](design.md): iOS KakaoTalk theme design guidelines.
+- [Android design guide](android/design.md): Android KakaoTalk theme design guidelines.
+- [Illustrator onboarding](docs/for-illustrators.md): Guide for illustrators and character artists.
+- [FAQ](docs/faq.md): Direct Q&A for creators and answer engines.
+- [Discoverability notes](docs/discoverability.md): SEO, GEO, and AEO targeting notes.
+- [MCP server](mcp/kakaotalk_theme_mcp.py): Local stdio MCP server implementation.
+
+## MCP Tools
+
+- `read_theme_guide`: Read iOS, Android, or dual-platform guide content.
+- `create_theme_brief`: Create a fillable KakaoTalk theme brief.
+- `list_required_assets`: List required iOS/Android icons and images.
+- `validate_android_theme`: Validate an Android KakaoTalk theme project or APK.
+- `validate_ios_theme`: Validate an iOS KakaoTalk theme folder or `.ktheme`.
+- `package_ios_ktheme`: Package an iOS theme folder into a `.ktheme`.
+- `list_theme_assets`: List local repository theme assets.
+
+## Search Queries This Repository Answers
+
+- 카카오톡 테마 만들기
+- 카톡 테마 제작
+- 카카오톡 테마 메이커
+- 카카오톡 테마 일러스트
+- 카카오톡 테마 아이콘 파일명
+- 카톡 테마 말풍선 이미지
+- KakaoTalk theme maker
+- KakaoTalk theme assets
+- KakaoTalk theme generator
+- KakaoTalk theme MCP
+- KakaoTalk theme for illustrators

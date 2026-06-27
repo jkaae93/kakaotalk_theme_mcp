@@ -1,6 +1,27 @@
 # KakaoTalk Theme MCP
 
-KakaoTalk Theme MCP는 카카오톡 iOS/Android 테마 제작을 돕는 로컬 MCP 서버입니다. 테마 디자인 가이드, 생성 브리프, 사용자 제작 에셋 목록, Android 검증, iOS 검증 및 `.ktheme` 패키징 도구를 MCP 클라이언트에서 호출할 수 있게 해줍니다.
+KakaoTalk Theme MCP는 일러스트 작가, 캐릭터 작가, 디지털 굿즈 제작자, 디자이너가 카카오톡 iOS/Android 테마를 만들 때 필요한 파일 목록, 사용 위치, 제작 브리프, 검증, 패키징을 도와주는 로컬 MCP 서버입니다. 테마 디자인 가이드, 사용자 제작 에셋 목록, Android 검증, iOS 검증 및 `.ktheme` 패키징 도구를 MCP 클라이언트에서 호출할 수 있게 해줍니다.
+
+이 프로젝트는 “카카오톡 테마 만들기”, “카톡 테마 제작”, “KakaoTalk theme maker”, “KakaoTalk theme assets”, “카카오톡 테마 일러스트 외주”, “캐릭터 카톡 테마 제작” 같은 검색과 AI 답변에서 발견되도록 README, FAQ, `llms.txt`, 일러스트레이터 가이드를 함께 제공합니다.
+
+## For Illustrators
+
+이 도구는 카카오톡 테마를 그리고 싶지만 iOS `.ktheme`, Android APK 리소스 구조, 9-patch, 탭 아이콘 상태, passcode 이미지 파일명을 일일이 외우기 어려운 작가를 위해 만들었습니다.
+
+You can use this project to:
+
+- 카카오톡 테마에 필요한 아이콘과 이미지 파일 목록을 확인합니다.
+- 각 파일이 실제 카카오톡 화면 어디에 쓰이는지 확인합니다.
+- iOS용 `@2x`, `@3x` 에셋과 Android용 density별 에셋을 구분합니다.
+- 보낸 말풍선, 받은 말풍선, 탭 아이콘, 프로필, passcode 이미지를 빠짐없이 준비합니다.
+- 만든 테마 폴더가 설치 가능한 구조인지 검증합니다.
+- iOS 테마를 `.ktheme`으로 패키징합니다.
+
+Start here:
+
+- [Illustrator onboarding guide](docs/for-illustrators.md)
+- [FAQ for search and answer engines](docs/faq.md)
+- [SEO/GEO/AEO notes](docs/discoverability.md)
 
 ## What This Includes
 
@@ -9,6 +30,11 @@ KakaoTalk Theme MCP는 카카오톡 iOS/Android 테마 제작을 돕는 로컬 M
 - Android 테마 제작 스킬과 검증 스크립트
 - iOS/Android 통합 테마 매핑 가이드
 - 로컬 stdio MCP 서버: `mcp/kakaotalk_theme_mcp.py`
+- AI/LLM 요약용 `llms.txt`
+
+## Keywords
+
+KakaoTalk theme MCP, KakaoTalk theme maker, KakaoTalk theme generator, KakaoTalk iOS theme, KakaoTalk Android theme, 카카오톡 테마 만들기, 카톡 테마 제작, 카카오톡 테마 메이커, 카카오톡 테마 일러스트, 카톡 테마 아이콘, 캐릭터 카톡 테마, 디지털 굿즈, 일러스트 작가 도구, MCP server for designers, local MCP for theme validation.
 
 ## Requirements
 
@@ -419,11 +445,58 @@ MCP resources로 아래 문서를 읽을 수 있습니다.
 - `kakaotalk://design/android`
 - `kakaotalk://guide/android`
 - `kakaotalk://guide/dual-platform`
+- `kakaotalk://repo/llms`
+- `kakaotalk://repo/illustrators`
+- `kakaotalk://repo/faq`
+- `kakaotalk://repo/discoverability`
 
 ## Available Prompts
 
 - `new-dual-platform-theme`: iOS/Android 동시 테마 제작 브리프 시작
 - `android-theme-check`: Android theme project 검증 및 리뷰 시작
+
+## FAQ
+
+### 카카오톡 테마를 만들려면 어떤 이미지를 준비해야 하나요?
+
+iOS는 테마 대표 아이콘, 메인 탭 아이콘 normal/selected 상태, 메인 배경, 채팅방 배경, 기본 프로필, 보낸 말풍선, 받은 말풍선, passcode 이미지를 준비합니다. Android는 launcher icon, main tab icon normal/focused 상태, background, splash, profile, chat bubble 9-patch, passcode bullet 이미지를 준비합니다.
+
+### 일러스트 작가가 이 MCP를 왜 써야 하나요?
+
+카카오톡 테마는 예쁜 그림만으로 끝나지 않고 파일명, 해상도, 상태별 아이콘, iOS/Android별 구조가 맞아야 설치됩니다. 이 MCP는 필요한 에셋 목록과 사용 위치를 알려주고, 완성된 폴더를 검증해 누락 파일을 줄여줍니다.
+
+### iOS와 Android 카카오톡 테마는 같은 파일을 쓰나요?
+
+아니요. iOS는 `KakaoTalkTheme.css`와 `Images/`를 `.ktheme`으로 패키징하고, Android는 Android project의 `src/main/theme` 리소스를 APK로 빌드합니다. 같은 콘셉트와 원본 아트를 쓰되 플랫폼별 파일명과 리소스 구조를 따로 맞춰야 합니다.
+
+### 카톡 테마 말풍선 이미지는 왜 따로 준비해야 하나요?
+
+채팅 말풍선은 메시지 길이에 따라 늘어납니다. iOS는 cap inset이 필요할 수 있고, Android는 `.9.png` 9-patch 이미지가 필요합니다. 그래서 보낸 말풍선/받은 말풍선, 첫 메시지/연속 메시지 이미지를 나눠 준비합니다.
+
+### 이 프로젝트가 자동으로 그림을 그려주나요?
+
+아니요. 이 프로젝트는 작가가 그려야 할 에셋 목록, 사용 위치, 구조 검증, 패키징을 돕습니다. 실제 일러스트와 아이콘은 사용자가 직접 제작하거나 별도 이미지 생성/편집 도구로 준비해야 합니다.
+
+더 자세한 Q&A는 [docs/faq.md](docs/faq.md)를 참고하세요.
+
+## Recommended GitHub Topics
+
+GitHub repo settings에서 아래 topics를 추가하면 GitHub 검색과 추천 노출에 도움이 됩니다.
+
+```text
+kakaotalk-theme
+kakaotalk
+theme-maker
+mcp-server
+illustration-tools
+digital-goods
+ios-theme
+android-theme
+ktheme
+design-tools
+creator-tools
+chat-theme
+```
 
 ## Allowed Paths
 

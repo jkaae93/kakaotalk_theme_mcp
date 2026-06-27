@@ -44,6 +44,10 @@ Use this shape in an MCP client that accepts stdio server configuration:
 - `kakaotalk://design/android`
 - `kakaotalk://guide/android`
 - `kakaotalk://guide/dual-platform`
+- `kakaotalk://repo/llms`
+- `kakaotalk://repo/illustrators`
+- `kakaotalk://repo/faq`
+- `kakaotalk://repo/discoverability`
 
 ## Safety
 
